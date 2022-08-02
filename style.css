@@ -7,14 +7,21 @@
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
   background-image: url(/Capstone-One/imgs/main-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  row-gap: 10px;
 }
 
 .pre-nav {
@@ -31,6 +38,8 @@ header {
 
 .hamburger {
   display: block;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 }
 
@@ -82,16 +91,18 @@ header {
   color: transparent;
   font-size: 50px;
   font-weight: 500;
-  width: 80%;
+  width: calc(100% - 2rem);
+  max-width: 650px;
   background-clip: border-box;
-  background-image: url("/Capstone-One/imgs/dark-red-gradient-background.jpg");
+  background-image: url(/Capstone-One/imgs/title-backgroud.jpg);
   background-size: cover;
   -webkit-background-clip: text;
   margin: 0 0 10px 15px;
 }
 
 .main-paragraph {
-  width: 700px;
+  width: calc(100% - 2rem);
+  max-width: 500px;
   padding: 15px 8px;
   line-height: 125%;
   font-family: 'Lato', sans-serif;
@@ -116,4 +127,84 @@ header {
   font-weight: 400;
   margin-top: -15px;
   margin-left: 15px;
+}
+
+@media (max-width: 450px) {
+  .main-title {
+    font-size: 35px;
+    line-height: 45px;
+    align-content: space-evenly;
+  }
+
+  .day {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  .main {
+    align-content: space-around;
+    row-gap: 20px;
+  }
+}
+
+/* Cards section */
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-image: url(/Capstone-One/imgs/pattern-background-black.png);
+  background-color: #272a31;
+}
+
+.info-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  padding-bottom: 8px;
+  margin: 8px;
+}
+
+.red-line {
+  width: 10%;
+  height: 1px;
+  background-color: #ec5242;
+  margin: 8px auto;
+}
+
+.cards-title {
+  margin: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-evenly;
+  height: auto;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ec5242;
+}
+
+.card-info {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  font-weight: 300;
+  color: #ffff;
 }
