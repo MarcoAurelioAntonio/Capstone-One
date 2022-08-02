@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-image: url(/Capstone-One/imgs/main-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pre-nav {
+  display: none;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+.navigation {
+  display: none;
+  flex-direction: row;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+}
+
+.items ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.item {
+  padding: 15px;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.succes {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  color: #ec5242;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-family: 'COCOGOOSE', sans-serif;
+  line-height: 55px;
+  color: transparent;
+  font-size: 50px;
+  font-weight: 500;
+  width: 80%;
+  background-clip: border-box;
+  background-image: url("/Capstone-One/imgs/dark-red-gradient-background.jpg");
+  background-size: cover;
+  -webkit-background-clip: text;
+  margin: 0 0 10px 15px;
+}
+
+.main-paragraph {
+  width: 700px;
+  padding: 15px 8px;
+  line-height: 125%;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  border: 4px solid #ffff;
+  background-color: #ebebeb;
+  margin-left: 15px;
+}
+
+.day {
+  font-family: COCOGOOSE, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: #272a31;
+  margin: 15px;
+}
+
+.place {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  margin-top: -15px;
+  margin-left: 15px;
+}
