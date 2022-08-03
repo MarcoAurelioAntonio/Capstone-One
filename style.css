@@ -156,7 +156,9 @@ header {
   height: auto;
   padding: 20px;
   background-image: url(/Capstone-One/imgs/pattern-background-black.png);
-  background-color: #272a31;
+  background-color: #1c1e22;
+  row-gap: 10px;
+  align-items: center;
 }
 
 .info-title {
@@ -165,14 +167,14 @@ header {
   font-size: 24px;
   color: rgb(255, 255, 255);
   padding-bottom: 8px;
-  margin: 8px;
+  text-align: center;
 }
 
 .red-line {
   width: 10%;
   height: 1px;
   background-color: #ec5242;
-  margin: 8px auto;
+  margin: 20px auto;
 }
 
 .cards-title {
@@ -183,18 +185,22 @@ header {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: auto;
   column-gap: 10px;
   align-items: center;
+  background-color: #272a31;
+  max-width: 800px;
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
 }
 
 .card-title {
+  width: 70px;
   font-family: 'Lato', sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -207,4 +213,169 @@ header {
   text-align: justify;
   font-weight: 300;
   color: #ffff;
+}
+
+.join-btn {
+  font: 400 15px 'Lato', sans-serif;
+  padding: 20px 20px;
+  border: none;
+  background-color: #ec5242;
+  color: #ffff;
+  margin: 30px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  width: 270px;
+}
+
+.join-btn:hover {
+  background-color: #ff422d;
+}
+
+.see-prog-btn {
+  display: none;
+}
+
+/* Speaker dinamic cards */
+.speaker-main-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #272a31;
+  margin: 15px;
+  text-align: center;
+}
+
+.speakers {
+  padding: 20px;
+}
+
+.speak-container {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
+}
+
+.speaker {
+  max-width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.speaker-name {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  color: #272a32;
+}
+
+.speaker-title {
+  color: rgb(239, 81, 60);
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.speaker-info {
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+}
+
+.speaker-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.show-more-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hide-card {
+  display: none;
+}
+
+.speak-container.morebtn .hide-card {
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .speaker-info {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 768px) {
+  .speak-container {
+    width: 80%;
+    grid-template-columns: auto auto;
+    margin: auto;
+  }
+}
+
+/* Partners */
+.partners {
+  display: block;
+  width: 100%;
+  background-color: #272a31;
+  padding: 20px;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.title-partners {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  padding: 3px;
+  color: #ffff;
+}
+
+.line-partners {
+  width: 10%;
+  height: 1px;
+  background-color: #ec5242;
+  margin: 15px auto;
+}
+
+.partner-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer {
+  padding: 30px;
+  margin: 0 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.logo-footer {
+  width: 65%;
+  background-image: url(/Capstone-One/imgs/Logo-capstone-one.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.info {
+  text-align: left;
 }
