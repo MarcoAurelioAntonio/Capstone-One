@@ -149,3 +149,158 @@ header {
     row-gap: 20px;
   }
 }
+
+/* Brand section */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.brand-text1 {
+  text-align: center;
+  font-size: 24px;
+  padding: 0 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+.red-line {
+  width: 10%;
+  height: 1px;
+  background-color: #ec5242;
+  margin: 15px auto;
+}
+
+.brand-text2 {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #272a31;
+}
+
+.brand-logo {
+  width: 360px;
+  height: 180px;
+  margin: 18px;
+  border: 1px solid #b1b1b1;
+  background-image: url(/Capstone-One/imgs/logo-orange.png);
+  background-color: #ebebeb;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.brand-logo:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 6px 7px 1px #272a31;
+}
+
+.challenge2013,
+.challenge2011 {
+  width: calc(100% - 40px);
+  max-width: 510px;
+  height: 256px;
+  margin: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 128px rgba(239, 81, 60, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.challenge2013 {
+  background-image: url(/Capstone-One/imgs/challenge2013.jpg);
+}
+
+.challenge2011 {
+  background-image: url(/Capstone-One/imgs/challenge2011.jpg);
+}
+
+.challenge2013:hover,
+.challenge2011:hover {
+  background-color: rgba(39, 81, 60, 0.1);
+  transform: scale(1.01);
+  box-shadow: 3px 6px 7px 1px #272a31;
+}
+
+.year {
+  font-family: 'COCOGOOSE', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffff;
+}
+
+.ch-place {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffff;
+}
+
+/* Partners */
+.partners {
+  display: block;
+  width: 100%;
+  background-color: #272a31;
+  padding: 20px;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.title-partners {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  padding: 3px;
+  color: #ffff;
+}
+
+.line-partners {
+  width: 10%;
+  height: 1px;
+  background-color: #ec5242;
+  margin: 15px auto;
+}
+
+.partner-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer {
+  padding: 30px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-footer {
+  width: 200px;
+  height: 80px;
+  background-image: url(/Capstone-One/imgs/Logo-capstone-one.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
