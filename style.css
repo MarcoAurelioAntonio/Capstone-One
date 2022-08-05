@@ -100,6 +100,10 @@ header {
   .nav-button {
     display: none;
   }
+
+  .logo-nav {
+    display: none;
+  }
 }
 
 /* Main section */
@@ -399,8 +403,7 @@ header {
 
 .logo-footer {
   width: 250px;
-  height: 90px;
-  background-image: url(/Capstone-One/imgs/logo-orange.png);
+  height: 70px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -437,7 +440,6 @@ header {
   .logo-nav {
     width: 175px;
     height: 60px;
-    background-image: url(/Capstone-One/imgs/logo-orange.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
