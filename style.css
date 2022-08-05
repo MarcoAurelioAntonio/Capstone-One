@@ -22,11 +22,14 @@ header {
 @media (max-width: 767px) {
   .hamburger {
     display: block;
-    width: 2rem;
-    height: 2rem;
+    width: 740px;
     cursor: pointer;
     padding: 25px;
     padding-right: 97%;
+  }
+
+  .navigation {
+    position: fixed;
   }
 
   .bar {
@@ -42,6 +45,7 @@ header {
   /* active */
   .items.active {
     left: 0;
+    position: fixed;
   }
 
   .hamburger.active {
@@ -128,7 +132,7 @@ header {
   font-family: 'Lato', sans-serif;
   font-size: 25px;
   color: #ec5242;
-  margin-top: 30px;
+  margin-top: 85px;
 }
 
 .main-title {
