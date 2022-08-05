@@ -43,37 +43,57 @@ const cardsContent = [
   },
 
 ];
+
 const divParent = document.querySelector('.speak-container');
 const dynamicSpeakersCards = () => {
   let speakersDiv = '';
 
-  for (let i = 0; i < cardsContent.length; i += 1) {
-    const speakersCard = `
-    <div class="speaker ${cardsContent[i].cardId}">
-      <div class="speaker-img">
-        <img src="${cardsContent[i].picture}" alt="" />
-      </div>
-      <div class="speaker-container">
-        <h2 class="speaker-name">${cardsContent[i].name}</h3>
-        <p class="speaker-title">${cardsContent[i].title}</p>
-        <p class="speaker-info">${cardsContent[i].description}</p>
-      </div>
-    </div>`;
-    speakersDiv += speakersCard;
+  if (divParent !== null) {
+    for (let i = 0; i < cardsContent.length; i += 1) {
+      const speakersCard = `
+      <div class="speaker ${cardsContent[i].cardId}">
+        <div class="speaker-img">
+          <img src="${cardsContent[i].picture}" alt="" />
+        </div>
+        <div class="speaker-container">
+          <h2 class="speaker-name">${cardsContent[i].name}</h3>
+          <p class="speaker-title">${cardsContent[i].title}</p>
+          <p class="speaker-info">${cardsContent[i].description}</p>
+        </div>
+      </div>`;
+      speakersDiv += speakersCard;
+    }
+    divParent.innerHTML = speakersDiv;
   }
-  divParent.innerHTML = speakersDiv;
 };
 dynamicSpeakersCards();
 
 /* Click See more */
 const show = document.getElementById('btnshow');
 
-show.addEventListener('click', () => {
-  divParent.classList.toggle('morebtn');
-  /* Change content of button */
-  if (show.innerHTML === 'SHOW MORE') {
-    show.innerHTML = 'SHOW LESS';
-  } else if (show.innerHTML === 'SHOW LESS') {
-    show.innerHTML = 'SHOW MORE';
-  }
+if (show !== null) {
+  show.addEventListener('click', () => {
+    divParent.classList.toggle('morebtn');
+    /* Change content of button */
+    if (show.innerHTML === 'SHOW MORE') {
+      show.innerHTML = 'SHOW LESS';
+    } else if (show.innerHTML === 'SHOW LESS') {
+      show.innerHTML = 'SHOW MORE';
+    }
+  });
+}
+
+/* Mobile nav-bar */
+const menuHamburguer = document.querySelector('.hamburger');
+const myNav = document.querySelector('.items');
+
+menuHamburguer.addEventListener('click', () => {
+  menuHamburguer.classList.toggle('active');
+  myNav.classList.toggle('active');
 });
+
+/* clicking in every item of the menu, the menu desapear */
+document.querySelectorAll('.item').forEach((n) => n.addEventListener('click', () => {
+  menuHamburguer.classList.remove('active');
+  myNav.classList.remove('active');
+}));

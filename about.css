@@ -28,10 +28,6 @@ header {
     padding-right: 97%;
   }
 
-  .navigation {
-    position: fixed;
-  }
-
   .bar {
     display: block;
     width: 25px;
@@ -40,6 +36,10 @@ header {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #000;
+  }
+
+  .navigation {
+    position: fixed;
   }
 
   /* active */
@@ -133,7 +133,9 @@ header {
   font-family: 'Lato', sans-serif;
   font-size: 25px;
   color: #ec5242;
+  margin-left: 15px;
   margin-top: 85px;
+  margin-bottom: 10px;
 }
 
 .main-title {
@@ -148,7 +150,7 @@ header {
   background-image: url(/Capstone-One/imgs/title-backgroud.jpg);
   background-size: cover;
   -webkit-background-clip: text;
-  margin-top: 10px;
+  margin: 0 0 10px 15px;
 }
 
 .main-paragraph {
@@ -159,22 +161,27 @@ header {
   font-family: 'Lato', sans-serif;
   font-size: 13px;
   text-align: justify;
-  border: 4px solid #ffff;
-  background-color: #ebebeb;
-}
-
-.day {
-  font-family: COCOGOOSE, sans-serif;
-  font-size: 27px;
-  font-weight: 700;
-  color: #272a31;
+  border: 4px solid #ebebeb;
+  background-color: #ffff;
+  margin-left: 15px;
 }
 
 .place {
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  margin-top: -15px;
+  margin: 15px;
+  max-width: 450px;
+}
+
+.day { /* Email */
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #272a31;
+  margin-left: 50px;
+  text-decoration: none;
+  font-style: italic;
 }
 
 @media (max-width: 450px) {
@@ -185,7 +192,16 @@ header {
   }
 
   .day {
-    font-size: 20px;
+    margin-left: 18px;
+  }
+}
+
+@media (min-width: 570px) {
+  .succes,
+  .main-title,
+  .main-paragraph,
+  .place {
+    margin-left: 40px;
   }
 }
 
@@ -196,176 +212,108 @@ header {
   }
 }
 
-/* Cards section */
-.cards {
+/* Brand section */
+.brand {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  background-image: url(/Capstone-One/imgs/pattern-background-black.png);
-  background-color: #1c1e22;
-  row-gap: 10px;
   align-items: center;
+  padding: 50px 0;
+  border-bottom: 1px solid #d3d3d3;
+  max-width: 578px;
+  margin: auto;
 }
 
-.info-title {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  padding-bottom: 8px;
+.brand-text1 {
   text-align: center;
+  font-size: 24px;
+  padding: 0 30px;
+  font-family: 'Lato', sans-serif;
 }
 
 .red-line {
   width: 10%;
   height: 1px;
   background-color: #ec5242;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
-.cards-title {
-  margin: 15px;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: space-around;
-  height: auto;
-  column-gap: 10px;
-  align-items: center;
-  background-color: #272a31;
-  max-width: 800px;
-}
-
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.card-title {
-  width: 70px;
+.brand-text2 {
   font-family: 'Lato', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #ec5242;
-}
-
-.card-info {
-  font-family: 'Lato', sans-serif;
-  font-size: 13px;
-  text-align: justify;
-  font-weight: 300;
-  color: #ffff;
-}
-
-.join-btn {
-  font: 400 15px 'Lato', sans-serif;
-  padding: 20px 20px;
-  border: none;
-  background-color: #ec5242;
-  color: #ffff;
-  margin: 30px;
-  transition: 0.5s ease;
-  cursor: pointer;
-  width: 270px;
-}
-
-.join-btn:hover {
-  background-color: #ff422d;
-}
-
-.see-prog-btn {
-  display: none;
-}
-
-/* Speaker dinamic cards */
-.speaker-main-title {
-  font-family: 'Lato', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: #272a31;
-  margin: 15px;
   text-align: center;
+  margin: 0;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #272a31;
 }
 
-.speakers {
-  padding: 20px;
+.brand-logo {
+  width: 360px;
+  height: 180px;
+  margin: 18px;
+  background-image: url(/Capstone-One/imgs/logo-orange.png);
+  background-color: #ebebeb;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.speak-container {
-  display: grid;
-  grid-template-columns: auto;
-  gap: 15px;
+.brand-logo:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 6px 7px 1px #272a31;
 }
 
-.speaker {
-  max-width: 700px;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  column-gap: 20px;
-  align-items: center;
-}
-
-.speaker-name {
-  font-size: 18px;
-  font-weight: 700;
-  font-family: 'Lato', sans-serif;
-  color: #272a32;
-}
-
-.speaker-title {
-  color: rgb(239, 81, 60);
-  font-family: 'Lato', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.speaker-info {
-  font-size: 13px;
-  font-family: 'Lato', sans-serif;
-  text-align: justify;
-}
-
-.speaker-container {
+.div-brand {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  align-items: center;
+  width: 100%;
 }
 
-.show-more-btn {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
+.challenge2013,
+.challenge2011 {
+  width: calc(100% - 40px);
+  max-width: 510px;
+  height: 256px;
+  margin: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 128px rgba(239, 81, 60, 0.5);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #d6d6d6;
-  background-color: #fff;
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
   cursor: pointer;
 }
 
-.hide-card {
-  display: none;
+.challenge2013 {
+  background-image: url(/Capstone-One/imgs/challenge2013.jpg);
 }
 
-.speak-container.morebtn .hide-card {
-  display: flex;
+.challenge2011 {
+  background-image: url(/Capstone-One/imgs/challenge2011.jpg);
 }
 
-@media (max-width: 500px) {
-  .speaker-info {
-    font-size: 11px;
-  }
+.challenge2013:hover,
+.challenge2011:hover {
+  background-color: rgba(39, 81, 60, 0.1);
+  transform: scale(1.01);
+  box-shadow: 3px 6px 7px 1px #272a31;
+}
+
+.year {
+  font-family: 'COCOGOOSE', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffff;
+}
+
+.ch-place {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffff;
 }
 
 /* Partners */
@@ -413,12 +361,11 @@ header {
 }
 
 .logo-footer {
-  width: 250px;
-  height: 70px;
+  width: 200px;
+  height: 60px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  border-image: none;
 }
 
 .info {
@@ -562,23 +509,24 @@ header {
     color: #ffff;
   }
 
-  /* Speakers */
-  .speak-container {
-    width: 80%;
-    grid-template-columns: auto auto;
-    margin: auto;
-  }
-
-  .hide-card {
+  .div-brand {
     display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
-  .show-more-btn {
-    display: none;
+  .brand {
+    max-width: 768px;
   }
 
-  .speakers {
-    padding-bottom: 60px;
+  .brand-text1,
+  .brand-text2 {
+    max-width: 500px;
+  }
+
+  .brand-logo {
+    width: 450px;
+    height: 250px;
   }
 }
 
@@ -602,5 +550,9 @@ header {
 
   .cards-container {
     column-gap: 15px;
+  }
+
+  .brand {
+    max-width: 950px;
   }
 }
