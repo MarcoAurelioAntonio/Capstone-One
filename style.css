@@ -46,6 +46,7 @@ header {
   .items.active {
     left: 0;
     position: fixed;
+    height: 100%;
   }
 
   .hamburger.active {
