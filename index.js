@@ -82,3 +82,18 @@ if (show !== null) {
     }
   });
 }
+
+/* Mobile nav-bar */
+const menuHamburguer = document.querySelector('.hamburger');
+const myNav = document.querySelector('.items');
+
+menuHamburguer.addEventListener('click', () => {
+  menuHamburguer.classList.toggle('active');
+  myNav.classList.toggle('active');
+});
+
+/* clicking in every item of the menu, the menu desapear */
+document.querySelectorAll('.item').forEach((n) => n.addEventListener('click', () => {
+  menuHamburguer.classList.remove('active');
+  myNav.classList.remove('active');
+}));

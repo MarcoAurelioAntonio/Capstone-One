@@ -18,61 +18,108 @@ header {
   display: none;
 }
 
-.nav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-}
+/* Mobile Menu */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    padding: 25px;
+    padding-right: 94%;
+  }
 
-.hamburger {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-}
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+  }
 
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: black;
-}
+  /* active */
+  .items.active {
+    left: 0;
+  }
 
-.navigation {
-  display: none;
-  flex-direction: row;
-}
+  .hamburger.active {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
 
-.items {
-  display: flex;
-  flex-direction: row;
-  width: 600px;
-}
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #ffff;
+  }
 
-.items ul {
-  display: flex;
-  list-style-type: none;
-}
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-.item {
-  padding: 15px;
-}
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #ffff;
+  }
 
-.item a {
-  text-decoration: none;
+  .bar-1 {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffff;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    left: -1000px;
+  }
+
+  .item {
+    padding: 20px;
+    padding-left: 80px;
+    border-bottom: 1px solid #272a31;
+    list-style: none;
+  }
+
+  .item a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    color: #d3d3d3;
+  }
+
+  .nav-button {
+    display: none;
+  }
 }
 
 /* Main section */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  row-gap: 10px;
+  align-content: center;
+}
+
 .succes {
   font-family: 'Lato', sans-serif;
   font-size: 25px;
   color: #ec5242;
   margin-left: 15px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -157,6 +204,8 @@ header {
   align-items: center;
   padding: 50px 0;
   border-bottom: 1px solid #d3d3d3;
+  max-width: 578px;
+  margin: auto;
 }
 
 .brand-text1 {
@@ -187,7 +236,6 @@ header {
   width: 360px;
   height: 180px;
   margin: 18px;
-  border: 1px solid #b1b1b1;
   background-image: url(/Capstone-One/imgs/logo-orange.png);
   background-color: #ebebeb;
   background-size: 90%;
@@ -198,6 +246,13 @@ header {
 .brand-logo:hover {
   transform: scale(1.01);
   box-shadow: 3px 6px 7px 1px #272a31;
+}
+
+.div-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .challenge2013,
@@ -293,7 +348,7 @@ header {
 .logo-footer {
   width: 200px;
   height: 80px;
-  background-image: url(/Capstone-One/imgs/Logo-capstone-one.png);
+  background-image: url(/Capstone-One/imgs/logo-orange.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -303,4 +358,188 @@ header {
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .pre-nav {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #272a32;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #ffff;
+  }
+
+  .logo-nav {
+    width: 175px;
+    height: 60px;
+    background-image: url(/Capstone-One/imgs/logo-orange.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-image: none;
+  }
+
+  .icon-nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    height: auto;
+    align-items: center;
+    gap: 20px;
+    float: right;
+    margin-top: 7px;
+    margin-right: 100px;
+  }
+
+  .pre-navigation-links {
+    display: flex;
+    height: auto;
+  }
+
+  .pre {
+    padding: 8px;
+    color: #ffff;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    width: 445px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .items ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .item {
+    padding: 0 8px;
+  }
+
+  .item a {
+    text-decoration: none;
+    color: black;
+    transition: 0.7s ease;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .item a:hover {
+    color: #ec5242;
+  }
+
+  .nav-button {
+    width: 100px;
+    height: 45px;
+    appearance: none;
+    background-color: #ffff;
+    border: 2px solid #ec5242;
+    cursor: pointer;
+  }
+
+  .nav-button:hover {
+    transition: 0.9s ease;
+    background-color: #f1928a;
+  }
+
+  /* Cards section */
+  .cards-container {
+    flex-direction: row;
+    column-gap: 8px;
+  }
+
+  .card {
+    flex-direction: column;
+    row-gap: 20px;
+    width: 140px;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 3px 4px 15px 1px rgba(249, 249, 249, 0.5);
+  }
+
+  .card-info {
+    height: 150px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .join-btn {
+    display: none;
+  }
+
+  .see-prog-btn {
+    display: block;
+    padding: 30px;
+    color: #ffff;
+  }
+
+  .div-brand {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .brand {
+    max-width: 768px;
+  }
+
+  .brand-text1,
+  .brand-text2 {
+    max-width: 500px;
+  }
+
+  .brand-logo {
+    width: 450px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav {
+    background-position-x: calc(120px);
+  }
+
+  .item {
+    padding: 0 20px;
+  }
+
+  /* Main section */
+  .main {
+    margin-left: -150px;
+  }
+
+  .card {
+    width: 180px;
+  }
+
+  .cards-container {
+    column-gap: 15px;
+  }
+
+  .brand {
+    max-width: 950px;
+  }
 }
